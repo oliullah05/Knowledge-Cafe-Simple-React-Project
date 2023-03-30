@@ -1,11 +1,11 @@
 import React from 'react';
-import "../assets/45684685.jpg"
+import logo from "../assets/logo.png"
 
 const Header = () => {
     return (
-        <div className='flex justify-between bg-blue-300'>
+        <div className='flex p-3 justify-between bg-blue-300 container mx-auto'>
            <h1 className='text-3xl font-bold'>OLi's Knowledge CAfe</h1>
-           <div><img className='' src="../assets/45684685.jpg" alt="" /></div> 
+           <div><img className='' src={logo} alt="" /></div> 
         </div>
     );
 };
