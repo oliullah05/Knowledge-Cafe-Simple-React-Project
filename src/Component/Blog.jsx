@@ -7,7 +7,7 @@ const Blog = (props) => {
     return (
 
 <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src={img} alt="Shoes" /></figure>
+  <figure><img src={img} alt="img url problem" /></figure>
   <div className="card-body">
     <h2 className="card-title">
     {id}
@@ -17,7 +17,7 @@ const Blog = (props) => {
     <div className="card-actions justify-end">
       <div className="badge badge-outline">Fashion</div>
       <div className="badge badge-outline">Products</div>
-    </div>
+    </div>y
   </div>
 </div>
      
