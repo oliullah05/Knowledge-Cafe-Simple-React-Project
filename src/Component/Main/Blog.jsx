@@ -14,6 +14,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Blog = (props) => {
+const [toastClick ,setToastClick]=useState(0)
+const clickToast=()=>{
+  setToastClick(toastClick+1)
+}
+
+
+
   const [clickCount2, setClickCount2] = useState(0);
   function ReadClick() {
       setClickCount2(clickCount+1);
@@ -39,20 +46,23 @@ const HandlerTittle=props.HandlerTittle;
     // }
 
 const bookmarkCommonFunction=()=>{
-  handleClick()
+  clickToast()
+  if(toastClick>0){
+    handleClick()
+  }
   ReadClick()
 }
 
  
-// console.log(ReadClick)
+console.log(toastClick)
     
-    const [clickCount, setClickCount] = useState(1);
+    const [clickCount, setClickCount] = useState(false);
 
     function handleClick() {
       toast("Don't added Two Time's")
-      setClickCount(clickCount + 1);
+      setClickCount(true);
     }
-    const style = clickCount%2 === 0 ? { backgroundColor: 'blue' } : {};
+    const style = clickCount? { backgroundColor: 'blue' } : {};
 
     
     return (
