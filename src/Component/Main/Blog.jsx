@@ -14,14 +14,23 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Blog = (props) => {
+  const [clickCount2, setClickCount2] = useState(0);
+  function ReadClick() {
+      setClickCount2(clickCount+1);
+    }
+
+
+
+
+
   const addReddingTime=props.addReddingTime;
 const HandlerTittle=props.HandlerTittle;
-const ReadClick = props.ReadClick;
-const readClickCount =props.clickCount;
+
+// const readClickCount =props.clickCount;
 
 
   const {img,name,date,published_date, redding_time,tittle,author_img}=props.card;
-    console.log(readClickCount)
+    // console.log(readClickCount)
 
 
     // const [showTittle,setShowTittle] =useState(null);
@@ -45,13 +54,7 @@ const bookmarkCommonFunction=()=>{
     }
     const style = clickCount%2 === 0 ? { backgroundColor: 'blue' } : {};
 
-    const oli =()=>{
-      if (readClickCount) {
-        addReddingTime(props.card);
-      } else {
-        return console.log('object')
-      }
-    }
+    
     return (
 
 <div className="card w-5/6 bg-base-100 shadow-xl mx-auto my-auto">
@@ -78,7 +81,7 @@ const bookmarkCommonFunction=()=>{
   <p >{redding_time} min read</p> 
   <span onClick={bookmarkCommonFunction}><img style={style}  
  
- onClick={readClickCount%2===0 ?()=> HandlerTittle(props.card) : null} 
+ onClick={clickCount2<1 ?()=> HandlerTittle(props.card) : null} 
 //  onClick={()=>{condition ? addReddingTime(props.card) : doSomethingElse()}}
 //  HandlerTittle(props.card)
 

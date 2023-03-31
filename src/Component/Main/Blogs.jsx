@@ -10,10 +10,10 @@ const Blogs = () => {
     
 //    experement start
 //   const [clickCount, setClickCount] = useState(1);
-const [clickCount, setClickCount] = useState(1);
-function ReadClick() {
-    setClickCount(clickCount+1);
-  }
+// const [clickCount, setClickCount] = useState(1);
+// function ReadClick() {
+//     setClickCount(clickCount+1);
+//   }
 //   console.log(clickCount)
 
 
@@ -68,7 +68,7 @@ setTittle(addTittle);
 
 <div className='basis-2/3'>
 {
-    data.map(card=><Blog clickCount={clickCount} ReadClick={ReadClick} HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
+    data.map(card=><Blog  HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
 }
 </div>
 <div className='basis-1/3'>
