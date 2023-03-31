@@ -42,6 +42,7 @@ const Blogs = () => {
     <p className='p-4 mb-4 text-primary-focus border-2 border-error rounded-2xl text-center text-3xl bg-slate-200'>Spent time on read : {readTotal} min</p>
     <div className='bg-slate-200 h-[800px] rounded-lg '>
    <p className='font-semibold text-2xl p-9'> Bookmarked Blogs :{readdingTime.length} </p>
+   
    <div className='text-2xl h-28 rounded-2xl shadow-lg m-2 bg-white'>
     <h1>asdas</h1>
    </div>

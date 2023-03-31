@@ -6,7 +6,10 @@ const Blog = (props) => {
     // console.log(props.card)
 
 
-
+const [showTittle,setShowTittle] =useState(null);
+const tittleShow=(props)=>{
+console.log(props);
+}
 
 
 
@@ -35,7 +38,7 @@ const Blog = (props) => {
 
 
 <div className='flex justify-center items-center'>
-  <p>{redding_time} min read</p> <img className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" />
+  <p>{redding_time} min read</p> <img onClick={()=>tittleShow(tittle)} className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" />
 </div>
    </section>
 <h1 className='text-2xl font-bold '>{tittle}</h1>
