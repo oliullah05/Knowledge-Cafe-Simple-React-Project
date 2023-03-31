@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import bookmark from "../../assets/bookmark.png"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Blog = (props) => {
   const addReddingTime=props.addReddingTime;
 const HandlerTittle=props.HandlerTittle;
@@ -18,8 +20,13 @@ const HandlerTittle=props.HandlerTittle;
  
 
     
+    const [clickCount, setClickCount] = useState(1);
 
-    
+    function handleClick() {
+      toast("jkshdf")
+      setClickCount(clickCount + 1);
+    }
+    const style = clickCount%2 === 0 ? { backgroundColor: 'blue' } : {};
     return (
 
 <div className="card w-5/6 bg-base-100 shadow-xl mx-auto my-auto">
@@ -43,7 +50,7 @@ const HandlerTittle=props.HandlerTittle;
 
 
 <div className='flex justify-center items-center'>
-  <p>{redding_time} min read</p> <img  onClick={()=>{HandlerTittle(props.card)}} className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" />
+  <p >{redding_time} min read</p> <span onClick={handleClick}><img style={style}  onClick={()=>{HandlerTittle(props.card)}} className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" /></span>
 </div>
    </section>
 <h1 className='text-2xl font-bold '>{tittle}</h1>
@@ -55,7 +62,7 @@ const HandlerTittle=props.HandlerTittle;
 
   </div>
 
-
+  <ToastContainer />
 </div>
      
     );

@@ -6,7 +6,7 @@ const Blogs = () => {
 
     const [readdingTime,setReaddingTime]=useState([]);
     const [tittle , setTittle]=useState([])
-
+   
 const HandlerTittle=(props)=>{
 const addTittle =[...tittle,props]
 setTittle(addTittle);
