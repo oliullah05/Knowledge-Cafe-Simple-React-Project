@@ -54,15 +54,15 @@ const bookmarkCommonFunction=()=>{
 }
 
  
-console.log(toastClick)
+// console.log(toastClick)
     
-    const [clickCount, setClickCount] = useState(false);
+    const [clickCount, setClickCount] = useState(true);
 
     function handleClick() {
-      toast("Don't added Two Time's")
-      setClickCount(true);
+      toast("Alrady Bookmarked")
+      setClickCount(false);
     }
-    const style = clickCount? { backgroundColor: 'blue' } : {};
+    const style = toastClick===1? { backgroundColor: 'blue' } : {};
 
     
     return (
