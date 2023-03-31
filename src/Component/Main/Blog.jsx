@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import bookmark from "../../assets/bookmark.png"
 const Blog = (props) => {
   const addReddingTime=props.addReddingTime;
+const HandlerTittle=props.HandlerTittle;
+
   const {img,name,date,published_date, redding_time,tittle,author_img}=props.card;
     // console.log(props.card)
 
 
-const [showTittle,setShowTittle] =useState(null);
-const tittleShow=(props)=>{
-console.log(props);
-}
+    // const [showTittle,setShowTittle] =useState(null);
+    // const tittleShow=(props)=>{
+    //   setShowTittle(props)
+    // }
 
 
 
+ 
+
+    
 
     
     return (
@@ -38,7 +43,7 @@ console.log(props);
 
 
 <div className='flex justify-center items-center'>
-  <p>{redding_time} min read</p> <img onClick={()=>tittleShow(tittle)} className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" />
+  <p>{redding_time} min read</p> <img  onClick={()=>{HandlerTittle(props.card)}} className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" />
 </div>
    </section>
 <h1 className='text-2xl font-bold '>{tittle}</h1>
