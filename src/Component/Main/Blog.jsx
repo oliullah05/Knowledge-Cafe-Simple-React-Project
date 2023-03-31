@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bookmark from "../../assets/bookmark.png"
 const Blog = (props) => {
-    console.log(props.card)
-    const {img,name,date,published_date, redding_time,tittle,author_img}=props.card;
+  const addReddingTime=props.addReddingTime;
+  const {img,name,date,published_date, redding_time,tittle,author_img}=props.card;
+    // console.log(props.card)
+
+
+
+
+
+
+
     
     return (
 
 <div className="card w-5/6 bg-base-100 shadow-xl mx-auto my-auto">
-  <figure className='mb-5'><img className='w-full' src={img} alt="img url problem" /></figure>
+  <figure className='mb-5'><img className='w-full ' src={img} alt="img url problem" /></figure>
   <div className="card-body p-0 m-0">
    <section className='flex justify-between'>
 
@@ -32,9 +40,9 @@ const Blog = (props) => {
    </section>
 <h1 className='text-2xl font-bold '>{tittle}</h1>
 
-<p className='text-purple-700 underline py-3'>mark as read</p>
+<p onClick={()=>{addReddingTime(props.card)}} className='text-purple-700 underline py-3'>mark as read</p>
 
-
+{/* onClick={()=>{addReddingTime(props.card)}} */}
 
 
   </div>
