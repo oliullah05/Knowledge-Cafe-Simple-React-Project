@@ -1,12 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Main/Blog';
 
-const Blogs = () => {
 
+const Blogs = () => {
+   
 
     const [readdingTime,setReaddingTime]=useState([]);
-    const [tittle , setTittle]=useState([])
-   
+    const [tittle , setTittle]=useState([]);
+    
+//    experement start
+//   const [clickCount, setClickCount] = useState(1);
+const [clickCount, setClickCount] = useState(1);
+function ReadClick() {
+    setClickCount(clickCount+1);
+  }
+//   console.log(clickCount)
+
+
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+
+
+
+
+
+
+
+
 const HandlerTittle=(props)=>{
 const addTittle =[...tittle,props]
 setTittle(addTittle);
@@ -23,7 +49,7 @@ setTittle(addTittle);
         readTotal =readTotal +time.redding_time;    
     }
 
-console.log(readdingTime);
+// console.log(readdingTime);
 
 
 
@@ -42,7 +68,7 @@ console.log(readdingTime);
 
 <div className='basis-2/3'>
 {
-    data.map(card=><Blog HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
+    data.map(card=><Blog clickCount={clickCount} ReadClick={ReadClick} HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
 }
 </div>
 <div className='basis-1/3'>
