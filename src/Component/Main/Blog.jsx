@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import bookmark from "../../assets/bookmark.png"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Blog = (props) => {
-  const [toastClick, setToastClick] = useState(0)
-  const clickToast = () => {
-    setToastClick(toastClick + 1)
-  }
-
-
+  const toast =props.toast;
+  const toastClick =props.toastClick;
+const clickToast=props.clickToast;
+// const [toastClick, setToastClick] = useState(0)
+//     const clickToast2 = () => {
+//       setToastClick(toastClick + 1)
+//     }
 
 
 
@@ -109,7 +109,7 @@ const Blog = (props) => {
 
       </div>
 
-      <ToastContainer />
+     
     </div>
 
   );

@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Main/Blog';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Blogs = () => {
+    const [toastClick, setToastClick] = useState(0)
+    const clickToast = () => {
+      setToastClick(toastClick + 1)
+    }
    
+
+
+
+
+
 
     const [readdingTime,setReaddingTime]=useState([]);
     const [tittle , setTittle]=useState([]);
@@ -66,11 +76,12 @@ setBookmarkCount(bookmarkCount+1)
 
     return (
         <>
+        <ToastContainer />
 <section className='container mx-auto md:flex md:flex-row sm:flex-col '>
 
 <div className='basis-2/3'>
 {
-    data.map(card=><Blog  HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
+    data.map(card=><Blog toast={toast} toastClick={toastClick} clickToast={clickToast} HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
 }
 </div>
 
