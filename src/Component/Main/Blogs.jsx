@@ -66,7 +66,7 @@ setBookmarkCount(bookmarkCount+1)
 
     return (
         <>
-<section className='container mx-auto flex   '>
+<section className='container mx-auto md:flex md:flex-row sm:flex-col '>
 
 <div className='basis-2/3'>
 {

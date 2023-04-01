@@ -3,21 +3,21 @@ import bookmark from "../../assets/bookmark.png"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
-
-
-
-
-
-
-
-
 const Blog = (props) => {
   const [toastClick, setToastClick] = useState(0)
   const clickToast = () => {
     setToastClick(toastClick + 1)
   }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,7 +59,7 @@ const Blog = (props) => {
   const [clickCount, setClickCount] = useState(true);
 
   function handleClick() {
-    toast("Alrady Bookmarked")
+    toast("Alrady Bookmarked!")
     setClickCount(false);
   }
   const style = toastClick >=1? { backgroundColor: 'blue' } : {};
