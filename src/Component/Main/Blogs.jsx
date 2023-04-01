@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Main/Blog';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 const Blogs = () => {
-    const [toastClick, setToastClick] = useState(0)
-    const clickToast = () => {
-      setToastClick(toastClick + 1)
-    }
    
-
-
-
-
-
 
     const [readdingTime,setReaddingTime]=useState([]);
     const [tittle , setTittle]=useState([]);
@@ -76,13 +66,14 @@ setBookmarkCount(bookmarkCount+1)
 
     return (
         <>
-        <ToastContainer />
 <section className='container mx-auto md:flex md:flex-row sm:flex-col '>
 
 <div className='basis-2/3'>
 {
-    data.map(card=><Blog toast={toast} toastClick={toastClick} clickToast={clickToast} HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
+    data.map(card=><Blog key={card.id} HandlerTittle={HandlerTittle} addReddingTime={addReddingTime} card={card}></Blog>)
+    
 }
+
 </div>
 
  
@@ -93,7 +84,7 @@ setBookmarkCount(bookmarkCount+1)
    
 
 {
-    tittle.map(data=><div className='text-2xl h-28 rounded-2xl shadow-lg m-2 bg-white flex justify-center items-center'><p className='text-center'>{data.tittle}</p></div>)
+    tittle.map((data , index)=><div key={index} className='text-2xl h-28 rounded-2xl shadow-lg m-2 bg-white flex justify-center items-center'><p className='text-center'>{data.tittle}</p></div>)
 }
 
 

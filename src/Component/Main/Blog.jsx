@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import bookmark from "../../assets/bookmark.png"
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Blog = (props) => {
-  const toast =props.toast;
-  const toastClick =props.toastClick;
-const clickToast=props.clickToast;
-// const [toastClick, setToastClick] = useState(0)
-//     const clickToast2 = () => {
-//       setToastClick(toastClick + 1)
-//     }
+  const [toastClick, setToastClick] = useState(0)
+  const clickToast = () => {
+    setToastClick(toastClick + 1)
+  }
+
+
 
 
 
@@ -68,7 +68,7 @@ const clickToast=props.clickToast;
 
   return (
 
-    <div className="card w-5/6 bg-base-100 shadow-xl mx-auto my-auto">
+    <div className="card w-5/6 bg-base-100 shadow-xl mx-auto my-5">
       <figure className='mb-5'><img className='w-full ' src={img} alt="img url problem" /></figure>
       <div className="card-body p-0 m-0">
         <section className='flex justify-between'>
@@ -96,12 +96,12 @@ const clickToast=props.clickToast;
               //  onClick={()=>{condition ? addReddingTime(props.card) : doSomethingElse()}}
               //  HandlerTittle(props.card)
 
-              className='w-5 h-5 gap-1' src={bookmark} alt="" srcset="" /></span>
+              className='w-5 h-5 gap-1' src={bookmark} alt="" /></span>
           </div>
         </section>
         <h1 className='text-2xl font-bold '>{tittle}</h1>
 
-        <span><p onClick={() => { addReddingTime(props.card) }} className='text-purple-700 underline py-3'>mark as read</p></span>
+        <span><p onClick={() => { addReddingTime(props.card) }} className='text-purple-700 underline py-3 inline-block'>mark as read</p></span>
         {/* <p onClick={()=>{condition ? addReddingTime(props.card) : doSomethingElse()}} className='text-purple-700 underline py-3'>mark as read</p>
  */}
         {/* onClick={()=>{addReddingTime(props.card)}} */}
@@ -109,7 +109,7 @@ const clickToast=props.clickToast;
 
       </div>
 
-     
+      <ToastContainer />
     </div>
 
   );
