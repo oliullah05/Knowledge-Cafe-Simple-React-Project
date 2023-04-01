@@ -7,30 +7,7 @@ const Blogs = () => {
 
     const [readdingTime,setReaddingTime]=useState([]);
     const [tittle , setTittle]=useState([]);
-    
-//    experement start
-//   const [clickCount, setClickCount] = useState(1);
-// const [clickCount, setClickCount] = useState(1);
-// function ReadClick() {
-//     setClickCount(clickCount+1);
-//   }
-//   console.log(clickCount)
-
-
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-// 
-
-
-
-
-const [bookmarkCount,setBookmarkCount]=useState(0)
-
+      const [bookmarkCount,setBookmarkCount]=useState(0)
 
 
 
@@ -51,7 +28,7 @@ setBookmarkCount(bookmarkCount+1)
         readTotal =readTotal +time.redding_time;    
     }
 
-// console.log(readdingTime);
+
 
 
 
@@ -86,23 +63,6 @@ setBookmarkCount(bookmarkCount+1)
 {
     tittle.map((data , index)=><div key={index} className='text-2xl h-28 rounded-2xl shadow-lg m-2 bg-white flex justify-center items-center'><p className='text-center'>{data.tittle}</p></div>)
 }
-
-
-
-
-  
-
-
-
-   {/* {readdingTime.map(() => (
-        <div>{time.redding_time}</div>
-      ))} */}
-
-
-
-
-
-
 
 
     </div>

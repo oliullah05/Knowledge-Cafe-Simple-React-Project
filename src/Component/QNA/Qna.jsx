@@ -2,7 +2,7 @@ import React from 'react';
 
 const Qna = () => {
     return (
-<div className='container mx-auto '>
+<div className='container mx-auto w-5/6'>
 <>
             <h1 className='text-3xl my-3 font-bold '>Deference between Props vs state?</h1>
             <p className=''>Props is used for passing by one component to another component . On the other hand useState used for managing data within a component . props are unchangeable but useState is changeable. props are read only but useState can be updated and state will re-render with the new data</p>
