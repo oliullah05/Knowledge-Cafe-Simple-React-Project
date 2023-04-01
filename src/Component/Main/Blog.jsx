@@ -4,6 +4,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Blog = (props) => {
+
+  
   const [toastClick, setToastClick] = useState(0)
   const clickToast = () => {
     setToastClick(toastClick + 1)
@@ -67,7 +69,7 @@ const Blog = (props) => {
           </div>
 
 
-          <div className='flex justify-center items-center gap-2'>
+          <div className='flex justify-center items-center md:gap-2 sm:gap-0'>
             <p className=''>{redding_time} min read</p>
             <span onClick={bookmarkCommonFunction}><img style={style}
 

@@ -3,11 +3,11 @@ import Blog from '../Main/Blog';
 
 
 const Blogs = () => {
-   
 
-    const [readdingTime,setReaddingTime]=useState([]);
-    const [tittle , setTittle]=useState([]);
-      const [bookmarkCount,setBookmarkCount]=useState(0)
+
+  const [readdingTime,setReaddingTime]=useState([]);
+  const [tittle , setTittle]=useState([]);
+  const [bookmarkCount,setBookmarkCount]=useState(0)
 
 
 
@@ -19,8 +19,8 @@ setBookmarkCount(bookmarkCount+1)
 
 
     const addReddingTime=(readTime)=>{
-      const readTimeArr =[...readdingTime,readTime]
-      setReaddingTime(readTimeArr)
+    const readTimeArr =[...readdingTime,readTime]
+    setReaddingTime(readTimeArr)
     }
     
     let readTotal = 0;
@@ -29,10 +29,7 @@ setBookmarkCount(bookmarkCount+1)
     }
 
 
-
-
-
-
+    
     const [data ,setData]=useState([]);
     useEffect(()=>{
         fetch("data.json")
